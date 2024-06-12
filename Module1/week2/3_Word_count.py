@@ -11,12 +11,13 @@ thường
 !gdown https://drive.google.com/uc?id=1IBScGdW2xlNsc9v5zSAya548kNgiOrko
 '''
 
+
 def word_count(file_path):
     result = {}
 
-    with open(file_path,"r") as f:
+    with open(file_path, "r") as f:
         data = f.read()
-    new_data = data.replace("\n"," ").lower()
+    new_data = data.replace("\n", " ").lower()
 
     for i in new_data.split(" "):
         if i not in result.keys():
@@ -25,6 +26,7 @@ def word_count(file_path):
             result[i] += 1
 
     print(result)
+
 
 if __name__ == "__main__":
     file_path = "data/P1_data.txt"

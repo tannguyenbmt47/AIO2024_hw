@@ -6,17 +6,19 @@ và value là số lần xuất hiện
 • Note: Giả sử các từ nhập vào đều có các chữ cái thuộc [a-z] hoặc [A-Z]
 '''
 
+
 def count_chars(string):
-    result  = {}
+    result = {}
     for i in string:
         if i not in result.keys():
             result[i] = 1
         else:
             result[i] += 1
 
-    print(result) 
+    print(result)
 
-if  __name__ == "__main__":
+
+if __name__ == "__main__":
     string = 'Happiness'
     count_chars(string)
 
