@@ -1,4 +1,4 @@
-def levenshtein_distance(source,target):
+def levenshtein_distance(source, target):
 
     # step 1
     M = len(source) + 1
@@ -16,9 +16,9 @@ def levenshtein_distance(source,target):
         for j in range(1, N):
             cost = 0 if source[i-1] == target[j-1] else 1
             D[i][j] = min(
-                D[i-1][j] + 1,    
-                D[i][j-1] + 1,    
-                D[i-1][j-1] + cost  
+                D[i-1][j] + 1,
+                D[i][j-1] + 1,
+                D[i-1][j-1] + cost
             )
 
     # step 4
@@ -28,4 +28,6 @@ def levenshtein_distance(source,target):
 if __name__ == "__main__":
     source = "hola"
     target = "hello"
-    print("Khoảng cách Levenshtein giữa '{}' và '{}' là: {}".format(source, target, levenshtein_distance(source, target)))
+
+    print("Khoảng cách Levenshtein giữa '{}' và '{}' là: {}".format(
+        source, target, levenshtein_distance(source, target)))
