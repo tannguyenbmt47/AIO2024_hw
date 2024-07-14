@@ -5,11 +5,7 @@ import numpy as np
 
 def compute_vector_length(vector):
 
-    vector_square = np.square(vector)
-
-    len_of_vector = np.sqrt(np.sum(vector_square))
-
-    # len_of_vector = np.linalg.norm(vector)
+    len_of_vector = np.linalg.norm(vector)
 
     return len_of_vector
 
